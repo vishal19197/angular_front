@@ -1,0 +1,12 @@
+.example-card{
+    margin-bottom: 10px;
+}
+.specer{
+    flex: 1 1 auto;
+}
+.card-header{
+    display: flex;
+}
+.icon-aling{
+    padding-left: 10px;
+}

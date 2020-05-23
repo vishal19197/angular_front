@@ -1,0 +1,24 @@
+<mat-card>
+  <div class="texe-center">
+    <span>Create New Post</span>
+    <form class="example-form" [formGroup]="myform">
+      <mat-form-field class="example-full-width">
+        <mat-label>Post Title</mat-label>
+        <input formControlName="title" matInput placeholder="Title">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Post Comment</mat-label>
+        <textarea formControlName="comment" matInput placeholder="comment"></textarea>
+      </mat-form-field>
+      <div class="btn">
+        <a mat-button routerLink="/">
+          <mat-icon *ngIf="isEdit" aria-hidden="false" aria-label="Example home icon">arrow_back</mat-icon>
+        </a>
+        <span class="specer"></span>
+        <button *ngIf="!isEdit" (click)="submitData()" type="button" mat-raised-button color="primary">Submit</button>
+        <button *ngIf="isEdit" (click)="upadteData()" type="button" mat-raised-button color="primary">Update</button>
+      </div>
+    </form>
+  </div>
+</mat-card>
